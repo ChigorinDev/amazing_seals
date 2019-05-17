@@ -13,12 +13,16 @@ app.get('/', (req, res) => {
   res.render('index', {data})
 })
 
-app.get('/seal-profile/:name', (req, res) => { 
-  res.render('seal-profile')
+app.get('/seal-profile/:id', (req, res) => { 
+  let id = req.params.id
+  let profile = data.seals.find(seals => id == seals.id);
+  // console.log(profile)
+  res.render('seal-profile', {profile});
 })
 
 app.get('/seals', (req, res) => { 
-  res.render('seals', {data})
+  res.render('seals', { data })
+  
 })
 
 app.get('/facts', (req, res) => { 
