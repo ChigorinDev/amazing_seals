@@ -1,4 +1,7 @@
 
 $(document).ready(function(){
-  $('.carousel').carousel();
+  $('.carousel').carousel({
+    dragged: true,
+    pressed: true,
+  });
 });

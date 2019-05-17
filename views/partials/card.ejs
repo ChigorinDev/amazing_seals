@@ -1,9 +1,9 @@
-<div class="row">
+<div class="row card-list">
     <% data.seals.map(seal => {  %>
-      <div class="col s4" id=<%= seal.id %></div>
+      <div class="col m4 s12 card-item" id='<%= seal.id %>'>
           <div class="card">
-            <div class="card-image">
-              <img src=<%= seal.image %>>
+            <div class="card-image seal-image">
+              <img src='<%= seal.image %>'>
               <span class="card-title"><%= seal.name %></span>
             </div>
             <div class="card-content">

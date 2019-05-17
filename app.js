@@ -10,10 +10,7 @@ app.use('/assets', express.static(__dirname + '/assets'))
 
 //setting routes
 app.get('/', (req, res) => { 
-
   res.render('index', {data})
-  res.send(data.seals)
-
 })
 
 app.get('/seal-profile/:name', (req, res) => { 
@@ -21,7 +18,7 @@ app.get('/seal-profile/:name', (req, res) => {
 })
 
 app.get('/seals', (req, res) => { 
-  res.render('seals')
+  res.render('seals', {data})
 })
 
 app.get('/facts', (req, res) => { 
